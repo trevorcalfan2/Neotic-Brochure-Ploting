@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NeoTic Perú - Brochure Corporativo</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        neotic: {
+                            red: '#E60000',
+                            darkred: '#B80000',
+                            black: '#0A0A0A',
+                            gray: '#1A1A1A',
+                            lightgray: '#F8F8F8',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #52525b;
+            margin: 0;
+            padding: 40px 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 40px;
+        }
+
+        .page {
+            width: 210mm;
+            height: 297mm;
+            background: white;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+            overflow: hidden;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+        }
+
+        @media print {
+            body {
+                background: none;
+                padding: 0;
+                gap: 0;
+            }
+            .page {
+                box-shadow: none;
+                margin: 0;
+                width: 210mm;
+                height: 297mm;
+                page-break-after: always;
+                break-after: page;
+            }
+            * {
+                -webkit-print-color-adjust: exact !important;
+                print-color-adjust: exact !important;
+            }
+        }
+
+        .gradient-red {
+            background: linear-gradient(135deg, #E60000 0%, #B80000 100%);
+        }
+
+        .gradient-dark {
+            background: linear-gradient(135deg, #0A0A0A 0%, #1A1A1A 100%);
+        }
+
+        .geometric-pattern {
+            background-image:
+                linear-gradient(30deg, #FF000008 12%, transparent 12.5%, transparent 87%, #FF000008 87.5%, #FF000008),
+                linear-gradient(150deg, #FF000008 12%, transparent 12.5%, transparent 87%, #FF000008 87.5%, #FF000008);
+            background-size: 80px 140px;
+        }
+
+        .icon-circle {
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            background: #E6000010;
+            transition: all 0.3s ease;
+        }
+
+        .service-card:hover .icon-circle {
+            background: #E60000;
+            transform: scale(1.1);
+        }
+
+        .service-card:hover .icon-circle i {
+            color: white !important;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ================== PÁGINA 1: PORTADA ================== -->
+    <div class="page">
+        <!-- Header -->
+        <header class="px-12 pt-8 pb-4 bg-white relative z-10">
+            <div class="flex items-center justify-between">
+                <img src="resources/logo.jpg" alt="NeoTic Logo" class="h-16 w-auto object-contain">
+                <div class="text-right">
+                    <div class="text-xs font-light text-gray-400 tracking-widest uppercase">Lima - Perú</div>
+                    <div class="text-sm font-semibold text-neotic-red mt-1">www.ntsoporte.com</div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Hero Section -->
+        <div class="relative flex-grow">
+            <div class="absolute inset-0">
+                <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=2072&auto=format&fit=crop"
+                     alt="Tecnología"
+                     class="w-full h-full object-cover opacity-20">
+                <div class="absolute inset-0 gradient-dark opacity-90"></div>
+            </div>
+            <div class="absolute inset-0 geometric-pattern"></div>
+
+            <div class="relative z-10 px-12 py-12 flex flex-col justify-center h-full text-white">
+                <div class="inline-flex items-center gap-2 bg-neotic-red rounded-full px-4 py-1.5 mb-6 w-fit">
+                    <div class="w-2 h-2 bg-white rounded-full animate-pulse"></div>
+                    <span class="text-xs font-bold uppercase tracking-wider">Soluciones Tecnológicas Empresariales</span>
+                </div>
+
+                <h1 class="font-black text-7xl leading-none mb-6">
+                    <span class="text-white">Ingeniería</span><br>
+                    <span class="text-neotic-red">que Impulsa</span><br>
+                    <span class="text-white">su Empresa</span>
+                </h1>
+
+                <p class="text-xl text-gray-300 leading-relaxed max-w-3xl mb-10 font-light">
+                    Especialistas certificados en <span class="font-bold text-white">infraestructura TI</span>,
+                    <span class="font-bold text-white">seguridad electrónica</span> y
+                    <span class="font-bold text-white">desarrollo de software</span>.
+                    Garantizamos continuidad operativa y crecimiento tecnológico.
+                </p>
+
+                <div class="grid grid-cols-4 gap-4">
+                    <div class="text-center">
+                        <div class="text-4xl font-black text-neotic-red mb-1">12+</div>
+                        <div class="text-xs text-gray-400 uppercase tracking-widest">Años de Experiencia</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-4xl font-black text-neotic-red mb-1">500+</div>
+                        <div class="text-xs text-gray-400 uppercase tracking-widest">Proyectos Exitosos</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-4xl font-black text-neotic-red mb-1">100%</div>
+                        <div class="text-xs text-gray-400 uppercase tracking-widest">Equipo Certificado</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-4xl font-black text-neotic-red mb-1">24/7</div>
+                        <div class="text-xs text-gray-400 uppercase tracking-widest">Soporte Técnico</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="gradient-red text-white py-3 px-12 relative z-10">
+            <div class="flex justify-between items-center text-sm">
+                <span class="font-light tracking-wider">RUC: 20609487187</span>
+                <span class="font-semibold">Certificaciones: ISO 9001 | ITIL | Microsoft Partner</span>
+            </div>
+        </footer>
+    </div>
+
+
+    <!-- ================== PÁGINA 2: ¿POR QUÉ ELEGIRNOS? ================== -->
+    <div class="page">
+        <div class="h-1.5 gradient-red"></div>
+
+        <div class="px-12 py-8">
+            <div class="mb-8">
+                <h2 class="font-black text-4xl text-neotic-black mb-2">¿Por qué elegir NeoTic?</h2>
+                <div class="h-1 bg-neotic-red w-32"></div>
+                <p class="text-gray-600 text-base mt-3 leading-relaxed">
+                    Somos su aliado estratégico en transformación digital. Más de una década respaldando empresas peruanas.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-2 gap-5 mb-8">
+                <div class="relative rounded-xl overflow-hidden h-48 group">
+                    <img src="https://images.unsplash.com/photo-1553877522-43269d4ea984?q=80&w=2070&auto=format&fit=crop"
+                         alt="Equipo profesional"
+                         class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-neotic-black via-neotic-black/60 to-transparent"></div>
+                    <div class="absolute bottom-0 left-0 right-0 p-4 text-white">
+                        <div class="flex items-center gap-2 mb-2">
+                            <i class="fas fa-users-gear text-2xl text-neotic-red"></i>
+                            <h3 class="font-black text-xl">Equipo Certificado</h3>
+                        </div>
+                        <p class="text-gray-300 text-xs">
+                            Ingenieros con certificaciones internacionales en Cisco, Microsoft, VMware y más.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="relative rounded-xl overflow-hidden h-48 group">
+                    <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?q=80&w=2070&auto=format&fit=crop"
+                         alt="Metodología ágil"
+                         class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-neotic-black via-neotic-black/60 to-transparent"></div>
+                    <div class="absolute bottom-0 left-0 right-0 p-4 text-white">
+                        <div class="flex items-center gap-2 mb-2">
+                            <i class="fas fa-rocket text-2xl text-neotic-red"></i>
+                            <h3 class="font-black text-xl">Metodología Ágil</h3>
+                        </div>
+                        <p class="text-gray-300 text-xs">
+                            Implementación rápida y eficiente con metodologías probadas y seguimiento continuo.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="relative rounded-xl overflow-hidden h-48 group">
+                    <img src="https://images.unsplash.com/photo-1560179707-f14e90ef3623?q=80&w=2073&auto=format&fit=crop"
+                         alt="Soporte 24/7"
+                         class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-neotic-black via-neotic-black/60 to-transparent"></div>
+                    <div class="absolute bottom-0 left-0 right-0 p-4 text-white">
+                        <div class="flex items-center gap-2 mb-2">
+                            <i class="fas fa-headset text-2xl text-neotic-red"></i>
+                            <h3 class="font-black text-xl">Soporte 24/7</h3>
+                        </div>
+                        <p class="text-gray-300 text-xs">
+                            Monitoreo constante y respuesta inmediata ante cualquier incidente tecnológico.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="relative rounded-xl overflow-hidden h-48 group">
+                    <img src="https://images.unsplash.com/photo-1563986768494-4dee2763ff3f?q=80&w=2070&auto=format&fit=crop"
+                         alt="Tecnología de punta"
+                         class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-neotic-black via-neotic-black/60 to-transparent"></div>
+                    <div class="absolute bottom-0 left-0 right-0 p-4 text-white">
+                        <div class="flex items-center gap-2 mb-2">
+                            <i class="fas fa-microchip text-2xl text-neotic-red"></i>
+                            <h3 class="font-black text-xl">Tecnología de Punta</h3>
+                        </div>
+                        <p class="text-gray-300 text-xs">
+                            Utilizamos las últimas tecnologías y mejores prácticas de la industria.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-neotic-lightgray rounded-xl p-6">
+                <h3 class="font-black text-2xl text-neotic-black mb-4 text-center">Sectores que Atendemos</h3>
+                <div class="grid grid-cols-4 gap-4">
+                    <div class="text-center">
+                        <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center mx-auto mb-2 shadow-md">
+                            <i class="fas fa-building text-xl text-neotic-red"></i>
+                        </div>
+                        <div class="font-bold text-xs text-neotic-black">Corporativo</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center mx-auto mb-2 shadow-md">
+                            <i class="fas fa-landmark text-xl text-neotic-red"></i>
+                        </div>
+                        <div class="font-bold text-xs text-neotic-black">Público</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center mx-auto mb-2 shadow-md">
+                            <i class="fas fa-hospital text-xl text-neotic-red"></i>
+                        </div>
+                        <div class="font-bold text-xs text-neotic-black">Salud</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center mx-auto mb-2 shadow-md">
+                            <i class="fas fa-graduation-cap text-xl text-neotic-red"></i>
+                        </div>
+                        <div class="font-bold text-xs text-neotic-black">Educación</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center mx-auto mb-2 shadow-md">
+                            <i class="fas fa-industry text-xl text-neotic-red"></i>
+                        </div>
+                        <div class="font-bold text-xs text-neotic-black">Manufactura</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center mx-auto mb-2 shadow-md">
+                            <i class="fas fa-shopping-cart text-xl text-neotic-red"></i>
+                        </div>
+                        <div class="font-bold text-xs text-neotic-black">Retail</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center mx-auto mb-2 shadow-md">
+                            <i class="fas fa-utensils text-xl text-neotic-red"></i>
+                        </div>
+                        <div class="font-bold text-xs text-neotic-black">Restaurantes</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center mx-auto mb-2 shadow-md">
+                            <i class="fas fa-ellipsis-h text-xl text-neotic-red"></i>
+                        </div>
+                        <div class="font-bold text-xs text-neotic-black">Y más</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="gradient-red text-white py-2.5 px-12 text-center mt-auto">
+            <div class="text-sm font-light tracking-widest">Más de 500 empresas confían en NeoTic</div>
+        </div>
+    </div>
+
+
+    <!-- ================== PÁGINA 3: SERVICIOS ================== -->
+    <div class="page">
+        <div class="h-1.5 gradient-red"></div>
+
+        <div class="px-12 py-8">
+            <div class="mb-6">
+                <h2 class="font-black text-4xl text-neotic-black mb-2">Nuestros Servicios</h2>
+                <div class="h-1 bg-neotic-red w-32"></div>
+                <p class="text-gray-600 text-sm mt-2">Soluciones integrales para cada necesidad tecnológica de su empresa.</p>
+            </div>
+
+            <div class="grid grid-cols-2 gap-4 mb-6">
+                <div class="service-card bg-white rounded-lg p-4 border-2 border-gray-100 hover:border-neotic-red transition-all">
+                    <div class="flex gap-3">
+                        <div class="icon-circle flex-shrink-0">
+                            <i class="fas fa-network-wired text-lg text-neotic-red"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-base text-neotic-black mb-1">Infraestructura de Redes</h3>
+                            <ul class="text-xs text-gray-600 space-y-0.5">
+                                <li>• Cableado estructurado LAN/WAN</li>
+                                <li>• Redes WiFi empresariales</li>
+                                <li>• Radio enlaces punto a punto</li>
+                                <li>• Antenas sectoriales</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="service-card bg-white rounded-lg p-4 border-2 border-gray-100 hover:border-neotic-red transition-all">
+                    <div class="flex gap-3">
+                        <div class="icon-circle flex-shrink-0">
+                            <i class="fas fa-video text-lg text-neotic-red"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-base text-neotic-black mb-1">Seguridad Electrónica</h3>
+                            <ul class="text-xs text-gray-600 space-y-0.5">
+                                <li>• Centros de control y monitoreo</li>
+                                <li>• Videovigilancia IP HD/4K</li>
+                                <li>• Video Walls profesionales</li>
+                                <li>• Seguridad ciudadana</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="service-card bg-white rounded-lg p-4 border-2 border-gray-100 hover:border-neotic-red transition-all">
+                    <div class="flex gap-3">
+                        <div class="icon-circle flex-shrink-0">
+                            <i class="fas fa-code text-lg text-neotic-red"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-base text-neotic-black mb-1">Desarrollo de Software</h3>
+                            <ul class="text-xs text-gray-600 space-y-0.5">
+                                <li>• Sistemas de planillas y RRHH</li>
+                                <li>• Software contable</li>
+                                <li>• Facturación electrónica SUNAT</li>
+                                <li>• Páginas web corporativas</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="service-card bg-white rounded-lg p-4 border-2 border-gray-100 hover:border-neotic-red transition-all">
+                    <div class="flex gap-3">
+                        <div class="icon-circle flex-shrink-0">
+                            <i class="fas fa-server text-lg text-neotic-red"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-base text-neotic-black mb-1">Servidores & Data Center</h3>
+                            <ul class="text-xs text-gray-600 space-y-0.5">
+                                <li>• Windows Server 2008-2022</li>
+                                <li>• Linux (Ubuntu, CentOS, RedHat)</li>
+                                <li>• SQL Server, MySQL, PostgreSQL</li>
+                                <li>• Virtualización VMware/Hyper-V</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="service-card bg-white rounded-lg p-4 border-2 border-gray-100 hover:border-neotic-red transition-all">
+                    <div class="flex gap-3">
+                        <div class="icon-circle flex-shrink-0">
+                            <i class="fas fa-shield-alt text-lg text-neotic-red"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-base text-neotic-black mb-1">Ciberseguridad</h3>
+                            <ul class="text-xs text-gray-600 space-y-0.5">
+                                <li>• Firewalls empresariales</li>
+                                <li>• Antivirus corporativos</li>
+                                <li>• Sistemas de backup automatizado</li>
+                                <li>• Auditorías de seguridad</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="service-card bg-white rounded-lg p-4 border-2 border-gray-100 hover:border-neotic-red transition-all">
+                    <div class="flex gap-3">
+                        <div class="icon-circle flex-shrink-0">
+                            <i class="fas fa-tools text-lg text-neotic-red"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-base text-neotic-black mb-1">Soporte Técnico</h3>
+                            <ul class="text-xs text-gray-600 space-y-0.5">
+                                <li>• Help Desk 24/7</li>
+                                <li>• Mantenimiento preventivo</li>
+                                <li>• Recuperación de datos</li>
+                                <li>• Soporte remoto y presencial</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="relative overflow-hidden rounded-xl gradient-dark p-5">
+                <div class="absolute top-0 right-0 w-64 h-64 bg-neotic-red opacity-10 rounded-full -mr-32 -mt-32"></div>
+                <div class="relative z-10">
+                    <div class="flex items-center gap-3 mb-3">
+                        <i class="fas fa-laptop text-3xl text-neotic-red"></i>
+                        <h3 class="font-black text-2xl text-white">Comercialización de Hardware</h3>
+                    </div>
+                    <div class="grid grid-cols-2 gap-3 text-white">
+                        <div>
+                            <h4 class="font-bold text-sm mb-1.5 text-neotic-red">Equipos de Cómputo</h4>
+                            <ul class="text-xs text-gray-300 space-y-0.5">
+                                <li>• Laptops Dell, HP, Lenovo, Apple</li>
+                                <li>• Computadoras de escritorio</li>
+                                <li>• Workstations profesionales</li>
+                                <li>• Tablets y dispositivos móviles</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-sm mb-1.5 text-neotic-red">Servidores y Networking</h4>
+                            <ul class="text-xs text-gray-300 space-y-0.5">
+                                <li>• Servidores Dell PowerEdge, HP ProLiant</li>
+                                <li>• Switches Cisco, HP, Ubiquiti</li>
+                                <li>• Routers y Access Points</li>
+                                <li>• Racks y gabinetes</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-sm mb-1.5 text-neotic-red">Impresoras y Periféricos</h4>
+                            <ul class="text-xs text-gray-300 space-y-0.5">
+                                <li>• Impresoras láser y matriciales</li>
+                                <li>• Plotters de gran formato</li>
+                                <li>• Scanners documentales</li>
+                                <li>• Suministros originales</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-sm mb-1.5 text-neotic-red">Seguridad Electrónica</h4>
+                            <ul class="text-xs text-gray-300 space-y-0.5">
+                                <li>• Cámaras IP Hikvision, Dahua</li>
+                                <li>• NVR/DVR profesionales</li>
+                                <li>• Control de acceso biométrico</li>
+                                <li>• Alarmas y sensores</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="gradient-red text-white py-2.5 px-12 text-center mt-auto">
+            <div class="text-sm font-light tracking-widest">Garantía oficial en todos nuestros productos</div>
+        </div>
+    </div>
+
+
+    <!-- ================== PÁGINA 4: CONTACTO ================== -->
+    <div class="page">
+        <div class="h-1.5 gradient-red"></div>
+
+        <div class="px-12 py-8">
+            <div class="mb-6 text-center">
+                <h2 class="font-black text-4xl text-neotic-black mb-2">Impulse su Negocio Hoy</h2>
+                <div class="h-1 bg-neotic-red w-32 mx-auto mb-3"></div>
+                <p class="text-gray-600 text-base">
+                    Contáctenos y descubra cómo transformar su infraestructura tecnológica
+                </p>
+            </div>
+
+            <div class="grid grid-cols-2 gap-6 mb-6">
+                <div class="bg-neotic-lightgray rounded-xl p-6">
+                    <h3 class="font-black text-2xl text-neotic-black mb-5">Información de Contacto</h3>
+
+                    <div class="space-y-3.5">
+                        <div class="flex items-start gap-3">
+                            <div class="w-10 h-10 bg-neotic-red rounded-full flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-user-tie text-white text-sm"></i>
+                            </div>
+                            <div>
+                                <div class="text-xs text-gray-500 uppercase tracking-wider font-semibold mb-0.5">Jefe de Proyectos</div>
+                                <div class="text-base font-bold text-neotic-black">Jorge Velásquez Roque</div>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-3">
+                            <div class="w-10 h-10 bg-neotic-red rounded-full flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-phone text-white text-sm"></i>
+                            </div>
+                            <div>
+                                <div class="text-xs text-gray-500 uppercase tracking-wider font-semibold mb-0.5">Teléfono Móvil</div>
+                                <div class="text-2xl font-black text-neotic-red">930 222 901</div>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-3">
+                            <div class="w-10 h-10 bg-neotic-red rounded-full flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-envelope text-white text-sm"></i>
+                            </div>
+                            <div>
+                                <div class="text-xs text-gray-500 uppercase tracking-wider font-semibold mb-0.5">Email Corporativo</div>
+                                <div class="text-base font-bold text-neotic-black">informes@ntsoporte.com</div>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-3">
+                            <div class="w-10 h-10 bg-neotic-red rounded-full flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-globe text-white text-sm"></i>
+                            </div>
+                            <div>
+                                <div class="text-xs text-gray-500 uppercase tracking-wider font-semibold mb-0.5">Sitio Web</div>
+                                <div class="text-base font-bold text-neotic-red">www.ntsoporte.com</div>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-3">
+                            <div class="w-10 h-10 bg-neotic-red rounded-full flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-map-marker-alt text-white text-sm"></i>
+                            </div>
+                            <div>
+                                <div class="text-xs text-gray-500 uppercase tracking-wider font-semibold mb-0.5">Ubicación</div>
+                                <div class="text-base font-bold text-neotic-black">Lima - Perú</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex flex-col gap-4">
+                    <div class="bg-white rounded-xl p-6 text-center shadow-lg border-2 border-gray-100">
+                        <h4 class="font-black text-xl text-neotic-black mb-3">Escanea y Visítanos</h4>
+                        <div class="bg-gray-50 p-4 rounded-lg inline-block">
+                            <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=www.ntsoporte.com"
+                                 alt="QR Web"
+                                 class="w-32 h-32 mx-auto">
+                        </div>
+                        <p class="text-gray-600 text-xs mt-3">Accede a nuestra web y portafolio completo</p>
+                    </div>
+
+                    <div class="bg-gradient-to-br from-neotic-red to-neotic-darkred rounded-xl p-5 text-white">
+                        <h4 class="font-black text-lg mb-3 text-center">Síguenos en Redes</h4>
+                        <div class="flex justify-around">
+                            <div class="text-center">
+                                <div class="w-11 h-11 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-1.5 hover:bg-white/30 transition-all">
+                                    <i class="fab fa-facebook-f text-lg"></i>
+                                </div>
+                                <div class="text-xs font-semibold">Facebook</div>
+                            </div>
+                            <div class="text-center">
+                                <div class="w-11 h-11 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-1.5 hover:bg-white/30 transition-all">
+                                    <i class="fab fa-linkedin-in text-lg"></i>
+                                </div>
+                                <div class="text-xs font-semibold">LinkedIn</div>
+                            </div>
+                            <div class="text-center">
+                                <div class="w-11 h-11 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-1.5 hover:bg-white/30 transition-all">
+                                    <i class="fab fa-instagram text-lg"></i>
+                                </div>
+                                <div class="text-xs font-semibold">Instagram</div>
+                            </div>
+                            <div class="text-center">
+                                <div class="w-11 h-11 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-1.5 hover:bg-white/30 transition-all">
+                                    <i class="fab fa-whatsapp text-lg"></i>
+                                </div>
+                                <div class="text-xs font-semibold">WhatsApp</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-2 gap-6 mb-6">
+                <div class="bg-white rounded-lg p-5 border-2 border-gray-100">
+                    <div class="flex items-center gap-2 mb-3">
+                        <i class="fas fa-clock text-2xl text-neotic-red"></i>
+                        <h4 class="font-black text-lg text-neotic-black">Horario de Atención</h4>
+                    </div>
+                    <div class="space-y-1.5 text-gray-700 text-sm">
+                        <div class="flex justify-between">
+                            <span class="font-semibold">Lunes - Viernes:</span>
+                            <span>8:00 AM - 7:00 PM</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span class="font-semibold">Sábados:</span>
+                            <span>9:00 AM - 1:00 PM</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span class="font-semibold">Soporte Emergencias:</span>
+                            <span class="text-neotic-red font-bold">24/7</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg p-5 border-2 border-gray-100">
+                    <div class="flex items-center gap-2 mb-3">
+                        <i class="fas fa-list-check text-2xl text-neotic-red"></i>
+                        <h4 class="font-black text-lg text-neotic-black">Proceso Simple</h4>
+                    </div>
+                    <div class="space-y-1.5 text-gray-700 text-sm">
+                        <div class="flex items-center gap-2">
+                            <div class="w-6 h-6 bg-neotic-red rounded-full flex items-center justify-center text-white font-bold text-xs flex-shrink-0">1</div>
+                            <span>Contáctanos y cuéntanos tu necesidad</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <div class="w-6 h-6 bg-neotic-red rounded-full flex items-center justify-center text-white font-bold text-xs flex-shrink-0">2</div>
+                            <span>Evaluamos y presentamos propuesta</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <div class="w-6 h-6 bg-neotic-red rounded-full flex items-center justify-center text-white font-bold text-xs flex-shrink-0">3</div>
+                            <span>Implementamos y damos soporte continuo</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="relative overflow-hidden rounded-xl h-24">
+                <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=2070&auto=format&fit=crop"
+                     alt="Equipo"
+                     class="w-full h-full object-cover">
+                <div class="absolute inset-0 gradient-dark opacity-90"></div>
+                <div class="absolute inset-0 flex items-center justify-center text-center">
+                    <div>
+                        <h3 class="text-3xl font-black text-white mb-1">
+                            ¿Listo para transformar su empresa?
+                        </h3>
+                        <p class="text-base text-gray-300">
+                            <i class="fas fa-phone-alt text-neotic-red"></i>
+                            <span class="font-bold text-neotic-red ml-1">930 222 901</span>
+                            <span class="mx-2">•</span>
+                            <i class="fas fa-envelope text-neotic-red"></i>
+                            <span class="font-bold text-neotic-red ml-1">informes@ntsoporte.com</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="gradient-red text-white py-3 px-12 mt-auto">
+            <div class="flex justify-between items-center text-sm">
+                <div>
+                    <div class="font-bold mb-0.5">NeoTic Perú</div>
+                    <div class="text-xs font-light">RUC: 20609487187 • Lima - Perú</div>
+                </div>
+                <div class="text-right">
+                    <div class="text-sm font-light">www.ntsoporte.com</div>
+                    <div class="text-xs">© 2024 NeoTic. Todos los derechos reservados.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
