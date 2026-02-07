@@ -19,8 +19,8 @@
                         neotic: {
                             red: '#E60000',
                             darkred: '#B80000',
-                            black: '#0A0A0A',
-                            gray: '#1A1A1A',
+                            black: '#334155',      // Gris slate corporativo - más claro
+                            gray: '#64748B',        // Gris slate medio corporativo
                             lightgray: '#F8F8F8',
                         }
                     }
@@ -75,13 +75,13 @@
         }
 
         .gradient-dark {
-            background: linear-gradient(135deg, #0A0A0A 0%, #1A1A1A 100%);
+            background: linear-gradient(135deg, #475569 0%, #64748B 100%);
         }
 
         .geometric-pattern {
             background-image:
-                linear-gradient(30deg, #FF000008 12%, transparent 12.5%, transparent 87%, #FF000008 87.5%, #FF000008),
-                linear-gradient(150deg, #FF000008 12%, transparent 12.5%, transparent 87%, #FF000008 87.5%, #FF000008);
+                linear-gradient(30deg, #E6000012 12%, transparent 12.5%, transparent 87%, #E6000012 87.5%, #E6000012),
+                linear-gradient(150deg, #E6000012 12%, transparent 12.5%, transparent 87%, #E6000012 87.5%, #E6000012);
             background-size: 80px 140px;
         }
 
@@ -122,64 +122,52 @@
         </header>
 
         <!-- Hero Section -->
-        <div class="relative flex-grow">
-            <div class="absolute inset-0">
-                <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=2072&auto=format&fit=crop"
-                     alt="Tecnología"
-                     class="w-full h-full object-cover opacity-20">
-                <div class="absolute inset-0 gradient-dark opacity-90"></div>
-            </div>
-            <div class="absolute inset-0 geometric-pattern"></div>
-
-            <div class="relative z-10 px-12 py-12 flex flex-col justify-center h-full text-white">
-                <div class="inline-flex items-center gap-2 bg-neotic-red rounded-full px-4 py-1.5 mb-6 w-fit">
-                    <div class="w-2 h-2 bg-white rounded-full animate-pulse"></div>
-                    <span class="text-xs font-bold uppercase tracking-wider">Soluciones Tecnológicas Empresariales</span>
+        <div class="relative flex-grow bg-white">
+            <div class="relative z-10 px-12 py-16 flex flex-col justify-center h-full text-neotic-black">
+                <div class="inline-block w-fit mb-6">
+                    <span class="text-xs font-semibold uppercase tracking-widest text-neotic-red">Soluciones Tecnológicas Empresariales</span>
+                    <div class="h-0.5 bg-neotic-red mt-2"></div>
                 </div>
 
-                <h1 class="font-black text-7xl leading-none mb-6">
-                    <span class="text-white">Tú socio</span><br>
-                    <span class="text-neotic-red">estratégico en</span><br>
-                    <span class="text-white">Tecnología empresal</span>
+                <h1 class="font-black text-6xl leading-tight mb-8 tracking-tight">
+                    <span class="text-neotic-black">Tu socio estratégico</span><br>
+                    <span class="text-neotic-black">en </span><span class="text-neotic-red">Tecnología Empresarial</span>
                 </h1>
 
-                <p class="text-xl text-gray-300 leading-relaxed max-w-3xl mb-10 font-light">
-                    Especialistas certificados en <span class="font-bold text-white">infraestructura TI</span>,
-                    <span class="font-bold text-white">seguridad electrónica</span> y
-                    <span class="font-bold text-white">desarrollo de software</span>.
-                    Garantizamos continuidad operativa y crecimiento tecnológico.
+                <p class="text-lg text-gray-600 leading-relaxed max-w-2xl mb-12 font-normal">
+                    Especialistas certificados en infraestructura TI, seguridad electrónica y desarrollo de software.
+                    <span class="block mt-2 text-neotic-black font-medium">Garantizamos continuidad operativa y crecimiento tecnológico.</span>
                 </p>
 
-                <div class="grid grid-cols-4 gap-4">
-                    <div class="text-center">
-                        <div class="text-4xl font-black text-neotic-red mb-1">12+</div>
-                        <div class="text-xs text-gray-400 uppercase tracking-widest">Años de Experiencia</div>
+                <div class="grid grid-cols-3 gap-12 max-w-2xl">
+                    <div class="text-left border-l-2 border-neotic-red pl-4">
+                        <div class="text-3xl font-bold text-neotic-black mb-1">12+ años</div>
+                        <div class="text-xs text-gray-500 uppercase tracking-wider">Experiencia</div>
                     </div>
-                   
-                    <div class="text-center">
-                        <div class="text-4xl font-black text-neotic-red mb-1">100%</div>
-                        <div class="text-xs text-gray-400 uppercase tracking-widest">Equipo Certificado</div>
+                    <div class="text-left border-l-2 border-neotic-red pl-4">
+                        <div class="text-3xl font-bold text-neotic-black mb-1">100%</div>
+                        <div class="text-xs text-gray-500 uppercase tracking-wider">Certificado</div>
                     </div>
-                    <div class="text-center">
-                        <div class="text-4xl font-black text-neotic-red mb-1">24/7</div>
-                        <div class="text-xs text-gray-400 uppercase tracking-widest">Soporte Técnico</div>
+                    <div class="text-left border-l-2 border-neotic-red pl-4">
+                        <div class="text-3xl font-bold text-neotic-black mb-1">24/7</div>
+                        <div class="text-xs text-gray-500 uppercase tracking-wider">Soporte</div>
                     </div>
                 </div>
 
-                <div class="mt-20 text-center">
-                    <p class="text-xs text-gray-400 uppercase tracking-widest mb-6 font-semibold border-b border-gray-800 pb-2 inline-block mx-auto px-8">Confían en Nosotros</p>
+                <div class="mt-24 text-center">
+                    <p class="text-xs text-gray-500 uppercase tracking-widest mb-6 font-semibold">Confían en Nosotros</p>
                     <div class="grid grid-cols-4 gap-12 max-w-2xl mx-auto">
-                        <div class="flex items-center justify-center h-10 hover:scale-110 transition-transform duration-300">
-                            <img src="resources/clientes/Bitel%20logo.svg" alt="Bitel" class="max-h-full max-w-full object-contain opacity-80 hover:opacity-100 transition-all">
+                        <div class="flex items-center justify-center h-12">
+                            <img src="resources/clientes/Bitel%20logo.svg" alt="Bitel" class="max-h-full max-w-full object-contain">
                         </div>
-                        <div class="flex items-center justify-center h-10 hover:scale-110 transition-transform duration-300">
-                            <img src="resources/clientes/DLPS%20ARQUITECTOS.png" alt="DLPS Arquitectos" class="max-h-full max-w-full object-contain opacity-80 hover:opacity-100 transition-all">
+                        <div class="flex items-center justify-center h-12">
+                            <img src="resources/clientes/DLPS%20ARQUITECTOS.png" alt="DLPS Arquitectos" class="max-h-full max-w-full object-contain opacity-60" style="filter: drop-shadow(0 0 1px rgba(0,0,0,0.4)) drop-shadow(0 0 1px rgba(0,0,0,0.4)) drop-shadow(0 0 1px rgba(0,0,0,0.4));">
                         </div>
-                        <div class="flex items-center justify-center h-10 hover:scale-110 transition-transform duration-300">
-                            <img src="resources/clientes/multilab.png" alt="Multilab" class="max-h-full max-w-full object-contain opacity-80 hover:opacity-100 transition-all">
+                        <div class="flex items-center justify-center h-12">
+                            <img src="resources/clientes/multilab.png" alt="Multilab" class="max-h-full max-w-full object-contain opacity-60" style="filter: drop-shadow(0 0 1px rgba(0,0,0,0.4)) drop-shadow(0 0 1px rgba(0,0,0,0.4)) drop-shadow(0 0 1px rgba(0,0,0,0.4));">
                         </div>
-                        <div class="flex items-center justify-center h-10 hover:scale-110 transition-transform duration-300">
-                            <img src="resources/clientes/Usil%20Logo.png" alt="USIL" class="max-h-full max-w-full object-contain opacity-80 hover:opacity-100 transition-all">
+                        <div class="flex items-center justify-center h-12">
+                            <img src="resources/clientes/Usil%20Logo.png" alt="USIL" class="max-h-full max-w-full object-contain" >
                         </div>
                     </div>
                 </div>
@@ -200,128 +188,207 @@
         <div class="h-1.5 gradient-red"></div>
 
         <div class="px-12 py-8">
-            <div class="mb-8">
-                <h2 class="font-black text-4xl text-neotic-black mb-2">¿Por qué elegir NeoTic?</h2>
-                <div class="h-1 bg-neotic-red w-32"></div>
-                <p class="text-gray-600 text-base mt-3 leading-relaxed">
-                    Somos su aliado estratégico en transformación digital. Más de una década respaldando empresas peruanas.
+            <div class="mb-10">
+                <h2 class="font-bold text-3xl text-neotic-black mb-3 tracking-tight">¿Por qué elegir NeoTic?</h2>
+                <div class="h-0.5 bg-neotic-red w-20 mb-4"></div>
+                <p class="text-gray-600 text-base leading-relaxed max-w-3xl">
+                    Su aliado estratégico en transformación digital. Más de una década respaldando empresas peruanas.
                 </p>
             </div>
 
-            <div class="grid grid-cols-2 gap-5 mb-8">
-                <div class="relative rounded-xl overflow-hidden h-48 group">
+            <div class="grid grid-cols-3 gap-4 mb-6">
+                <div class="relative rounded-lg overflow-hidden h-40">
                     <img src="https://images.unsplash.com/photo-1553877522-43269d4ea984?q=80&w=2070&auto=format&fit=crop"
                          alt="Equipo profesional"
-                         class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
-                    <div class="absolute inset-0 bg-gradient-to-t from-neotic-black via-neotic-black/60 to-transparent"></div>
-                    <div class="absolute bottom-0 left-0 right-0 p-4 text-white">
-                        <div class="flex items-center gap-2 mb-2">
-                            <i class="fas fa-users-gear text-2xl text-neotic-red"></i>
-                            <h3 class="font-black text-xl">Equipo Certificado</h3>
+                         class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-neotic-black via-neotic-black/50 to-transparent"></div>
+                    <div class="absolute bottom-0 left-0 right-0 p-3 text-white">
+                        <div class="flex items-center gap-2 mb-1.5">
+                            <i class="fas fa-users-gear text-xl text-neotic-red"></i>
+                            <h3 class="font-black text-base">Equipo Certificado</h3>
                         </div>
-                        <p class="text-gray-300 text-xs">
-                            Ingenieros con certificaciones internacionales en Cisco, Microsoft, VMware y más.
+                        <p class="text-gray-300 text-xs leading-snug">
+                            12+ años de experiencia. Certificaciones Cisco CCNP, VMware VCP, Microsoft MCSE. +200 proyectos ejecutados.
                         </p>
                     </div>
                 </div>
 
-                <div class="relative rounded-xl overflow-hidden h-48 group">
+                <div class="relative rounded-xl overflow-hidden h-44 group">
                     <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?q=80&w=2070&auto=format&fit=crop"
                          alt="Metodología ágil"
-                         class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
-                    <div class="absolute inset-0 bg-gradient-to-t from-neotic-black via-neotic-black/60 to-transparent"></div>
-                    <div class="absolute bottom-0 left-0 right-0 p-4 text-white">
-                        <div class="flex items-center gap-2 mb-2">
-                            <i class="fas fa-rocket text-2xl text-neotic-red"></i>
-                            <h3 class="font-black text-xl">Metodología Ágil</h3>
+                         class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-neotic-black via-neotic-black/50 to-transparent"></div>
+                    <div class="absolute bottom-0 left-0 right-0 p-3 text-white">
+                        <div class="flex items-center gap-2 mb-1.5">
+                            <i class="fas fa-rocket text-xl text-neotic-red"></i>
+                            <h3 class="font-black text-base">Metodología Ágil</h3>
                         </div>
-                        <p class="text-gray-300 text-xs">
-                            Implementación rápida y eficiente con metodologías probadas y seguimiento continuo.
+                        <p class="text-gray-300 text-xs leading-snug">
+                            Implementación rápida con SCRUM/ITIL. Plazos garantizados y seguimiento en tiempo real de cada proyecto.
                         </p>
                     </div>
                 </div>
 
-                <div class="relative rounded-xl overflow-hidden h-48 group">
+                <div class="relative rounded-xl overflow-hidden h-44 group">
                     <img src="https://images.unsplash.com/photo-1560179707-f14e90ef3623?q=80&w=2073&auto=format&fit=crop"
                          alt="Soporte 24/7"
-                         class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
-                    <div class="absolute inset-0 bg-gradient-to-t from-neotic-black via-neotic-black/60 to-transparent"></div>
-                    <div class="absolute bottom-0 left-0 right-0 p-4 text-white">
-                        <div class="flex items-center gap-2 mb-2">
-                            <i class="fas fa-headset text-2xl text-neotic-red"></i>
-                            <h3 class="font-black text-xl">Soporte 24/7</h3>
+                         class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-neotic-black via-neotic-black/50 to-transparent"></div>
+                    <div class="absolute bottom-0 left-0 right-0 p-3 text-white">
+                        <div class="flex items-center gap-2 mb-1.5">
+                            <i class="fas fa-headset text-xl text-neotic-red"></i>
+                            <h3 class="font-black text-base">Soporte 24/7</h3>
                         </div>
-                        <p class="text-gray-300 text-xs">
-                            Monitoreo constante y respuesta inmediata ante cualquier incidente tecnológico.
+                        <p class="text-gray-300 text-xs leading-snug">
+                            NOC 24/7/365 con monitoreo proactivo. Tiempo de respuesta <15 min en emergencias críticas.
                         </p>
                     </div>
                 </div>
 
-                <div class="relative rounded-xl overflow-hidden h-48 group">
+                <div class="relative rounded-xl overflow-hidden h-44 group">
                     <img src="https://images.unsplash.com/photo-1563986768494-4dee2763ff3f?q=80&w=2070&auto=format&fit=crop"
                          alt="Tecnología de punta"
-                         class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
-                    <div class="absolute inset-0 bg-gradient-to-t from-neotic-black via-neotic-black/60 to-transparent"></div>
-                    <div class="absolute bottom-0 left-0 right-0 p-4 text-white">
-                        <div class="flex items-center gap-2 mb-2">
-                            <i class="fas fa-microchip text-2xl text-neotic-red"></i>
-                            <h3 class="font-black text-xl">Tecnología de Punta</h3>
+                         class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-neotic-black via-neotic-black/50 to-transparent"></div>
+                    <div class="absolute bottom-0 left-0 right-0 p-3 text-white">
+                        <div class="flex items-center gap-2 mb-1.5">
+                            <i class="fas fa-microchip text-xl text-neotic-red"></i>
+                            <h3 class="font-black text-base">Tecnología de Punta</h3>
                         </div>
-                        <p class="text-gray-300 text-xs">
-                            Utilizamos las últimas tecnologías y mejores prácticas de la industria.
+                        <p class="text-gray-300 text-xs leading-snug">
+                            Infraestructura Cisco, Dell, HP. Soluciones cloud híbrido AWS/Azure. Últimas tecnologías de la industria.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="relative rounded-xl overflow-hidden h-44 group">
+                    <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?q=80&w=2070&auto=format&fit=crop"
+                         alt="Experiencia Telecomunicaciones"
+                         class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-neotic-black via-neotic-black/50 to-transparent"></div>
+                    <div class="absolute bottom-0 left-0 right-0 p-3 text-white">
+                        <div class="flex items-center gap-2 mb-1.5">
+                            <i class="fas fa-tower-broadcast text-xl text-neotic-red"></i>
+                            <h3 class="font-black text-base">Experiencia en Telco</h3>
+                        </div>
+                        <p class="text-gray-300 text-xs leading-snug">
+                            Trabajo con Bitel en infraestructura FTTH. +500 km de fibra óptica desplegada en 15+ regiones del Perú.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="relative rounded-xl overflow-hidden h-44 group">
+                    <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=2070&auto=format&fit=crop"
+                         alt="SLA Garantizado"
+                         class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-neotic-black via-neotic-black/50 to-transparent"></div>
+                    <div class="absolute bottom-0 left-0 right-0 p-3 text-white">
+                        <div class="flex items-center gap-2 mb-1.5">
+                            <i class="fas fa-file-contract text-xl text-neotic-red"></i>
+                            <h3 class="font-black text-base">SLA Garantizado</h3>
+                        </div>
+                        <p class="text-gray-300 text-xs leading-snug">
+                            Acuerdos de servicio personalizados. 99.9% uptime garantizado. Penalidades por incumplimiento.
                         </p>
                     </div>
                 </div>
             </div>
 
-            <div class="bg-neotic-lightgray rounded-xl p-6">
-                <h3 class="font-black text-2xl text-neotic-black mb-4 text-center">Sectores que Atendemos</h3>
-                <div class="grid grid-cols-4 gap-4">
+            <!-- Ventajas Competitivas -->
+            <div class="bg-neotic-lightgray rounded-lg p-6 mb-6 border-l-4 border-neotic-red">
+                <h3 class="font-bold text-lg mb-4 text-neotic-black">Ventajas Competitivas</h3>
+                <div class="grid grid-cols-4 gap-6">
+                    <div>
+                        <div class="mb-2">
+                            <i class="fas fa-users-gear text-2xl text-neotic-red"></i>
+                        </div>
+                        <div class="text-xs font-semibold mb-1 text-neotic-black">Equipo Multidisciplinario</div>
+                        <div class="text-xs text-gray-600 leading-relaxed">Ingenieros especializados en telco e infraestructura</div>
+                    </div>
+                    <div>
+                        <div class="mb-2">
+                            <i class="fas fa-clock text-2xl text-neotic-red"></i>
+                        </div>
+                        <div class="text-xs font-semibold mb-1 text-neotic-black">Soporte Local 24/7</div>
+                        <div class="text-xs text-gray-600 leading-relaxed">Respuesta rápida en todo el territorio nacional</div>
+                    </div>
+                    <div>
+                        <div class="mb-2">
+                            <i class="fas fa-handshake text-2xl text-neotic-red"></i>
+                        </div>
+                        <div class="text-xs font-semibold mb-1 text-neotic-black">Experiencia con ISPs</div>
+                        <div class="text-xs text-gray-600 leading-relaxed">Conocemos las necesidades de telecomunicaciones</div>
+                    </div>
+                    <div>
+                        <div class="mb-2">
+                            <i class="fas fa-box-open text-2xl text-neotic-red"></i>
+                        </div>
+                        <div class="text-xs font-semibold mb-1 text-neotic-black">Soluciones Llave en Mano</div>
+                        <div class="text-xs text-gray-600 leading-relaxed">Desde diseño hasta soporte post-implementación</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-lg p-6 border border-gray-200">
+                <h3 class="font-bold text-lg text-neotic-black mb-4">Sectores que Atendemos</h3>
+                <div class="grid grid-cols-5 gap-3">
                     <div class="text-center">
-                        <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center mx-auto mb-2 shadow-md">
-                            <i class="fas fa-building text-xl text-neotic-red"></i>
+                        <div class="w-11 h-11 bg-white rounded-full flex items-center justify-center mx-auto mb-1.5 shadow-md">
+                            <i class="fas fa-tower-broadcast text-lg text-neotic-red"></i>
+                        </div>
+                        <div class="font-bold text-xs text-neotic-black">Telecomunicaciones</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="w-11 h-11 bg-white rounded-full flex items-center justify-center mx-auto mb-1.5 shadow-md">
+                            <i class="fas fa-building text-lg text-neotic-red"></i>
                         </div>
                         <div class="font-bold text-xs text-neotic-black">Corporativo</div>
                     </div>
                     <div class="text-center">
-                        <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center mx-auto mb-2 shadow-md">
-                            <i class="fas fa-landmark text-xl text-neotic-red"></i>
+                        <div class="w-11 h-11 bg-white rounded-full flex items-center justify-center mx-auto mb-1.5 shadow-md">
+                            <i class="fas fa-landmark text-lg text-neotic-red"></i>
                         </div>
                         <div class="font-bold text-xs text-neotic-black">Público</div>
                     </div>
                     <div class="text-center">
-                        <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center mx-auto mb-2 shadow-md">
-                            <i class="fas fa-hospital text-xl text-neotic-red"></i>
+                        <div class="w-11 h-11 bg-white rounded-full flex items-center justify-center mx-auto mb-1.5 shadow-md">
+                            <i class="fas fa-hospital text-lg text-neotic-red"></i>
                         </div>
                         <div class="font-bold text-xs text-neotic-black">Salud</div>
                     </div>
                     <div class="text-center">
-                        <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center mx-auto mb-2 shadow-md">
-                            <i class="fas fa-graduation-cap text-xl text-neotic-red"></i>
+                        <div class="w-11 h-11 bg-white rounded-full flex items-center justify-center mx-auto mb-1.5 shadow-md">
+                            <i class="fas fa-graduation-cap text-lg text-neotic-red"></i>
                         </div>
                         <div class="font-bold text-xs text-neotic-black">Educación</div>
                     </div>
                     <div class="text-center">
-                        <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center mx-auto mb-2 shadow-md">
-                            <i class="fas fa-industry text-xl text-neotic-red"></i>
+                        <div class="w-11 h-11 bg-white rounded-full flex items-center justify-center mx-auto mb-1.5 shadow-md">
+                            <i class="fas fa-industry text-lg text-neotic-red"></i>
                         </div>
                         <div class="font-bold text-xs text-neotic-black">Manufactura</div>
                     </div>
                     <div class="text-center">
-                        <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center mx-auto mb-2 shadow-md">
-                            <i class="fas fa-shopping-cart text-xl text-neotic-red"></i>
+                        <div class="w-11 h-11 bg-white rounded-full flex items-center justify-center mx-auto mb-1.5 shadow-md">
+                            <i class="fas fa-shopping-cart text-lg text-neotic-red"></i>
                         </div>
                         <div class="font-bold text-xs text-neotic-black">Retail</div>
                     </div>
                     <div class="text-center">
-                        <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center mx-auto mb-2 shadow-md">
-                            <i class="fas fa-utensils text-xl text-neotic-red"></i>
+                        <div class="w-11 h-11 bg-white rounded-full flex items-center justify-center mx-auto mb-1.5 shadow-md">
+                            <i class="fas fa-utensils text-lg text-neotic-red"></i>
                         </div>
                         <div class="font-bold text-xs text-neotic-black">Restaurantes</div>
                     </div>
                     <div class="text-center">
-                        <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center mx-auto mb-2 shadow-md">
-                            <i class="fas fa-ellipsis-h text-xl text-neotic-red"></i>
+                        <div class="w-11 h-11 bg-white rounded-full flex items-center justify-center mx-auto mb-1.5 shadow-md">
+                            <i class="fas fa-database text-lg text-neotic-red"></i>
+                        </div>
+                        <div class="font-bold text-xs text-neotic-black">Data Centers</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="w-11 h-11 bg-white rounded-full flex items-center justify-center mx-auto mb-1.5 shadow-md">
+                            <i class="fas fa-ellipsis-h text-lg text-neotic-red"></i>
                         </div>
                         <div class="font-bold text-xs text-neotic-black">Y más</div>
                     </div>
@@ -334,115 +401,217 @@
     </div>
 
 
-    <!-- ================== PÁGINA 3: SERVICIOS ================== -->
+    <!-- ================== PÁGINA 3: SERVICIOS PRINCIPALES ================== -->
     <div class="page">
         <div class="h-1.5 gradient-red"></div>
 
         <div class="px-12 py-8">
-            <div class="mb-6">
-                <h2 class="font-black text-4xl text-neotic-black mb-2">Nuestros Servicios</h2>
-                <div class="h-1 bg-neotic-red w-32"></div>
-                <p class="text-gray-600 text-sm mt-2">Soluciones integrales para cada necesidad tecnológica de su empresa.</p>
+            <div class="mb-8">
+                <h2 class="font-bold text-3xl text-neotic-black mb-3 tracking-tight">Nuestros Servicios</h2>
+                <div class="h-0.5 bg-neotic-red w-20 mb-3"></div>
+                <p class="text-gray-600 text-base leading-relaxed">Soluciones especializadas para proveedores de telecomunicaciones y empresas tecnológicas.</p>
             </div>
 
-            <div class="grid grid-cols-2 gap-4 mb-6">
-                <div class="service-card bg-white rounded-lg p-4 border-2 border-gray-100 hover:border-neotic-red transition-all">
-                    <div class="flex gap-3">
-                        <div class="icon-circle flex-shrink-0">
+            <div class="grid grid-cols-2 gap-5">
+                <!-- Servicio 1: Infraestructura de Redes & Fibra Óptica -->
+                <div class="service-card bg-white rounded-xl p-5 border-2 border-gray-100 hover:border-neotic-red transition-all shadow-sm">
+                    <div class="flex gap-4">
+                        <div class="icon-circle flex-shrink-0" style="width: 60px; height: 60px;">
+                            <i class="fas fa-circle-nodes text-2xl text-neotic-red"></i>
+                        </div>
+                        <div class="flex-1">
+                            <div class="flex items-center gap-2 mb-2">
+                                <h3 class="font-black text-lg text-neotic-black">Infraestructura de Redes & Fibra Óptica</h3>
+                                <span class="bg-neotic-red text-white text-xs px-2 py-0.5 rounded-full font-bold">⚡ ISP</span>
+                            </div>
+                            <ul class="text-xs text-gray-600 space-y-1 leading-relaxed">
+                                <li>• <strong>Fibra óptica FTTH/GPON:</strong> ONTs, OLTs, splitters certificados</li>
+                                <li>• <strong>Empalmes de fusión:</strong> Certificación OTDR y documentación completa</li>
+                                <li>• <strong>Cableado última milla:</strong> Residencial, empresarial y zonas complejas</li>
+                                <li>• <strong>Radio enlaces:</strong> PTP/PTMP para sierra y selva, WiFi mesh alta densidad</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Servicio 2: NOC & Centro de Operaciones -->
+                <div class="service-card bg-white rounded-xl p-5 border-2 border-gray-100 hover:border-neotic-red transition-all shadow-sm">
+                    <div class="flex gap-4">
+                        <div class="icon-circle flex-shrink-0" style="width: 60px; height: 60px;">
+                            <i class="fas fa-tower-broadcast text-2xl text-neotic-red"></i>
+                        </div>
+                        <div class="flex-1">
+                            <div class="flex items-center gap-2 mb-2">
+                                <h3 class="font-black text-lg text-neotic-black">NOC & Centro de Operaciones 24/7</h3>
+                                <span class="bg-neotic-red text-white text-xs px-2 py-0.5 rounded-full font-bold">🆕 NUEVO</span>
+                            </div>
+                            <ul class="text-xs text-gray-600 space-y-1 leading-relaxed">
+                                <li>• <strong>Monitoreo 24/7/365:</strong> Supervisión proactiva con Zabbix, Nagios, PRTG</li>
+                                <li>• <strong>Dashboards en tiempo real:</strong> Alertas automáticas y gestión de incidencias</li>
+                                <li>• <strong>Gestión de tickets:</strong> OTRS, Jira con SLA personalizado</li>
+                                <li>• <strong>Reportes de performance:</strong> Disponibilidad, tráfico y análisis de capacidad</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Servicio 3: Servidores & Data Center -->
+                <div class="service-card bg-white rounded-xl p-5 border-2 border-gray-100 hover:border-neotic-red transition-all shadow-sm">
+                    <div class="flex gap-4">
+                        <div class="icon-circle flex-shrink-0" style="width: 60px; height: 60px;">
+                            <i class="fas fa-database text-2xl text-neotic-red"></i>
+                        </div>
+                        <div class="flex-1">
+                            <div class="flex items-center gap-2 mb-2">
+                                <h3 class="font-black text-lg text-neotic-black">Servidores & Data Center</h3>
+                                <span class="bg-neotic-red text-white text-xs px-2 py-0.5 rounded-full font-bold">⚡ ISP</span>
+                            </div>
+                            <ul class="text-xs text-gray-600 space-y-1 leading-relaxed">
+                                <li>• <strong>Diseño de data centers:</strong> Tier II/III con redundancia y climatización</li>
+                                <li>• <strong>Virtualización empresarial:</strong> VMware vSphere, Hyper-V, Proxmox</li>
+                                <li>• <strong>Alta disponibilidad:</strong> Clustering, failover automático, storage SAN/NAS</li>
+                                <li>• <strong>Cloud híbrido:</strong> Migración y gestión AWS, Azure, GCP con backup</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Servicio 4: Sistemas de Billing & CRM -->
+                <div class="service-card bg-white rounded-xl p-5 border-2 border-gray-100 hover:border-neotic-red transition-all shadow-sm">
+                    <div class="flex gap-4">
+                        <div class="icon-circle flex-shrink-0" style="width: 60px; height: 60px;">
+                            <i class="fas fa-file-invoice-dollar text-2xl text-neotic-red"></i>
+                        </div>
+                        <div class="flex-1">
+                            <div class="flex items-center gap-2 mb-2">
+                                <h3 class="font-black text-lg text-neotic-black">Sistemas de Billing & CRM para ISPs</h3>
+                                <span class="bg-neotic-red text-white text-xs px-2 py-0.5 rounded-full font-bold">🆕 NUEVO</span>
+                            </div>
+                            <ul class="text-xs text-gray-600 space-y-1 leading-relaxed">
+                                <li>• <strong>Billing automatizado:</strong> Facturación mensual, prepago, pospago para ISPs</li>
+                                <li>• <strong>Integración RADIUS/AAA:</strong> Autenticación y control de ancho de banda</li>
+                                <li>• <strong>Portales de autopago:</strong> Gestión de clientes, consultas y pagos online</li>
+                                <li>• <strong>Facturación SUNAT:</strong> E-factura para ISPs con pasarelas Niubiz, Culqi</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-6 bg-neotic-lightgray rounded-xl p-5">
+                <div class="flex items-center gap-3 mb-3">
+                    <i class="fas fa-rocket text-2xl text-neotic-red"></i>
+                    <h3 class="font-black text-xl text-neotic-black">Capacidades Clave para ISPs</h3>
+                </div>
+                <div class="grid grid-cols-3 gap-4">
+                    <div class="bg-white rounded-lg p-3 border-l-4 border-neotic-red">
+                        <div class="flex items-center gap-2 mb-1">
                             <i class="fas fa-network-wired text-lg text-neotic-red"></i>
+                            <h4 class="font-bold text-sm text-neotic-black">Despliegue de Fibra FTTH</h4>
                         </div>
-                        <div>
-                            <h3 class="font-bold text-base text-neotic-black mb-1">Infraestructura de Redes</h3>
-                            <ul class="text-xs text-gray-600 space-y-0.5">
-                                <li>• Cableado estructurado LAN/WAN</li>
-                                <li>• Redes WiFi empresariales</li>
-                                <li>• Radio enlaces punto a punto</li>
-                                <li>• Antenas sectoriales</li>
-                            </ul>
-                        </div>
+                        <p class="text-xs text-gray-600">Diseño, instalación y certificación de redes de fibra óptica con tecnología GPON para última milla.</p>
                     </div>
-                </div>
-
-                <div class="service-card bg-white rounded-lg p-4 border-2 border-gray-100 hover:border-neotic-red transition-all">
-                    <div class="flex gap-3">
-                        <div class="icon-circle flex-shrink-0">
-                            <i class="fas fa-video text-lg text-neotic-red"></i>
-                        </div>
-                        <div>
-                            <h3 class="font-bold text-base text-neotic-black mb-1">Seguridad Electrónica</h3>
-                            <ul class="text-xs text-gray-600 space-y-0.5">
-                                <li>• Centros de control y monitoreo</li>
-                                <li>• Videovigilancia IP HD/4K</li>
-                                <li>• Video Walls profesionales</li>
-                                <li>• Seguridad ciudadana</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="service-card bg-white rounded-lg p-4 border-2 border-gray-100 hover:border-neotic-red transition-all">
-                    <div class="flex gap-3">
-                        <div class="icon-circle flex-shrink-0">
-                            <i class="fas fa-code text-lg text-neotic-red"></i>
-                        </div>
-                        <div>
-                            <h3 class="font-bold text-base text-neotic-black mb-1">Desarrollo de Software</h3>
-                            <ul class="text-xs text-gray-600 space-y-0.5">
-                                <li>• Sistemas de planillas y RRHH</li>
-                                <li>• Software contable</li>
-                                <li>• Facturación electrónica SUNAT</li>
-                                <li>• Páginas web corporativas</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="service-card bg-white rounded-lg p-4 border-2 border-gray-100 hover:border-neotic-red transition-all">
-                    <div class="flex gap-3">
-                        <div class="icon-circle flex-shrink-0">
+                    <div class="bg-white rounded-lg p-3 border-l-4 border-neotic-red">
+                        <div class="flex items-center gap-2 mb-1">
                             <i class="fas fa-server text-lg text-neotic-red"></i>
+                            <h4 class="font-bold text-sm text-neotic-black">Infraestructura Escalable</h4>
                         </div>
-                        <div>
-                            <h3 class="font-bold text-base text-neotic-black mb-1">Servidores & Data Center</h3>
-                            <ul class="text-xs text-gray-600 space-y-0.5">
-                                <li>• Windows Server 2008-2022</li>
-                                <li>• Linux (Ubuntu, CentOS, RedHat)</li>
-                                <li>• SQL Server, MySQL, PostgreSQL</li>
-                                <li>• Virtualización VMware/Hyper-V</li>
+                        <p class="text-xs text-gray-600">Data centers robustos con virtualización y alta disponibilidad para soportar crecimiento de ISPs.</p>
+                    </div>
+                    <div class="bg-white rounded-lg p-3 border-l-4 border-neotic-red">
+                        <div class="flex items-center gap-2 mb-1">
+                            <i class="fas fa-shield-halved text-lg text-neotic-red"></i>
+                            <h4 class="font-bold text-sm text-neotic-black">Seguridad y Monitoreo</h4>
+                        </div>
+                        <p class="text-xs text-gray-600">NOC 24/7, ciberseguridad avanzada y protección anti-DDoS para mantener servicios críticos operativos.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="gradient-red text-white py-2.5 px-12 text-center mt-auto">
+            <div class="text-sm font-light tracking-widest">Especialistas en infraestructura para ISPs y Telecomunicaciones</div>
+        </div>
+    </div>
+
+    <!-- ================== PÁGINA 4: SERVICIOS COMPLEMENTARIOS & HARDWARE ================== -->
+    <div class="page">
+        <div class="h-1.5 gradient-red"></div>
+
+        <div class="px-12 py-8">
+            <div class="mb-8">
+                <h2 class="font-bold text-3xl text-neotic-black mb-3 tracking-tight">Servicios Complementarios</h2>
+                <div class="h-0.5 bg-neotic-red w-20"></div>
+            </div>
+
+            <div class="grid grid-cols-2 gap-5 mb-5">
+                <!-- Servicio 5: Desarrollo de Software -->
+                <div class="service-card bg-white rounded-xl p-5 border-2 border-gray-100 hover:border-neotic-red transition-all shadow-sm">
+                    <div class="flex gap-4">
+                        <div class="icon-circle flex-shrink-0" style="width: 55px; height: 55px;">
+                            <i class="fas fa-code text-xl text-neotic-red"></i>
+                        </div>
+                        <div class="flex-1">
+                            <h3 class="font-black text-base text-neotic-black mb-2">Desarrollo de Software</h3>
+                            <ul class="text-xs text-gray-600 space-y-1">
+                                <li>• <strong>Apps móviles ISPs:</strong> iOS/Android para clientes</li>
+                                <li>• <strong>Portales web:</strong> Autogestión y soporte técnico</li>
+                                <li>• <strong>Dashboards:</strong> Consumo y velocidad en tiempo real</li>
+                                <li>• <strong>PWA responsive:</strong> Integración con billing y RADIUS</li>
                             </ul>
                         </div>
                     </div>
                 </div>
 
-                <div class="service-card bg-white rounded-lg p-4 border-2 border-gray-100 hover:border-neotic-red transition-all">
-                    <div class="flex gap-3">
-                        <div class="icon-circle flex-shrink-0">
-                            <i class="fas fa-shield-alt text-lg text-neotic-red"></i>
+                <!-- Servicio 6: Ciberseguridad -->
+                <div class="service-card bg-white rounded-xl p-5 border-2 border-gray-100 hover:border-neotic-red transition-all shadow-sm">
+                    <div class="flex gap-4">
+                        <div class="icon-circle flex-shrink-0" style="width: 55px; height: 55px;">
+                            <i class="fas fa-shield-halved text-xl text-neotic-red"></i>
                         </div>
-                        <div>
-                            <h3 class="font-bold text-base text-neotic-black mb-1">Ciberseguridad</h3>
-                            <ul class="text-xs text-gray-600 space-y-0.5">
-                                <li>• Firewalls empresariales</li>
-                                <li>• Antivirus corporativos</li>
-                                <li>• Sistemas de backup automatizado</li>
-                                <li>• Auditorías de seguridad</li>
+                        <div class="flex-1">
+                            <h3 class="font-black text-base text-neotic-black mb-2">Ciberseguridad</h3>
+                            <ul class="text-xs text-gray-600 space-y-1">
+                                <li>• <strong>Firewalls perimetrales:</strong> Fortinet, Palo Alto, pfSense</li>
+                                <li>• <strong>Protección anti-DDoS:</strong> Para infraestructura ISP</li>
+                                <li>• <strong>Auditorías y pentesting:</strong> Seguridad en redes FTTH</li>
+                                <li>• <strong>SOC básico:</strong> Cumplimiento GDPR y protección de datos</li>
                             </ul>
                         </div>
                     </div>
                 </div>
 
-                <div class="service-card bg-white rounded-lg p-4 border-2 border-gray-100 hover:border-neotic-red transition-all">
-                    <div class="flex gap-3">
-                        <div class="icon-circle flex-shrink-0">
-                            <i class="fas fa-tools text-lg text-neotic-red"></i>
+                <!-- Servicio 7: Seguridad Electrónica -->
+                <div class="service-card bg-white rounded-xl p-5 border-2 border-gray-100 hover:border-neotic-red transition-all shadow-sm">
+                    <div class="flex gap-4">
+                        <div class="icon-circle flex-shrink-0" style="width: 55px; height: 55px;">
+                            <i class="fas fa-video text-xl text-neotic-red"></i>
                         </div>
-                        <div>
-                            <h3 class="font-bold text-base text-neotic-black mb-1">Soporte Técnico</h3>
-                            <ul class="text-xs text-gray-600 space-y-0.5">
-                                <li>• Help Desk 24/7</li>
-                                <li>• Mantenimiento preventivo</li>
-                                <li>• Recuperación de datos</li>
-                                <li>• Soporte remoto y presencial</li>
+                        <div class="flex-1">
+                            <h3 class="font-black text-base text-neotic-black mb-2">Seguridad Electrónica</h3>
+                            <ul class="text-xs text-gray-600 space-y-1">
+                                <li>• <strong>Videovigilancia NOC:</strong> Centros de operación HD/4K</li>
+                                <li>• <strong>Control de acceso:</strong> Biométrico para data centers</li>
+                                <li>• <strong>Video Walls:</strong> Monitoreo centralizado profesional</li>
+                                <li>• <strong>Sistemas antiincendio:</strong> Monitoreo ambiental crítico</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Servicio 8: Soporte Técnico -->
+                <div class="service-card bg-white rounded-xl p-5 border-2 border-gray-100 hover:border-neotic-red transition-all shadow-sm">
+                    <div class="flex gap-4">
+                        <div class="icon-circle flex-shrink-0" style="width: 55px; height: 55px;">
+                            <i class="fas fa-headset text-xl text-neotic-red"></i>
+                        </div>
+                        <div class="flex-1">
+                            <h3 class="font-black text-base text-neotic-black mb-2">Soporte Técnico B2B</h3>
+                            <ul class="text-xs text-gray-600 space-y-1">
+                                <li>• <strong>Help Desk multinivel:</strong> L1, L2, L3 especializado</li>
+                                <li>• <strong>Soporte on-site:</strong> Para infraestructura crítica ISP</li>
+                                <li>• <strong>Mantenimiento preventivo:</strong> Equipos de red y servidores</li>
+                                <li>• <strong>SLA personalizado:</strong> Capacitación y gestión de RMA</li>
                             </ul>
                         </div>
                     </div>
@@ -453,44 +622,40 @@
                 <div class="absolute top-0 right-0 w-64 h-64 bg-neotic-red opacity-10 rounded-full -mr-32 -mt-32"></div>
                 <div class="relative z-10">
                     <div class="flex items-center gap-3 mb-3">
-                        <i class="fas fa-laptop text-3xl text-neotic-red"></i>
-                        <h3 class="font-black text-2xl text-white">Comercialización de Hardware</h3>
+                        <i class="fas fa-laptop text-2xl text-neotic-red"></i>
+                        <h3 class="font-black text-xl text-white">Comercialización de Hardware</h3>
                     </div>
-                    <div class="grid grid-cols-2 gap-3 text-white">
+                    <div class="grid grid-cols-4 gap-3 text-white">
                         <div>
-                            <h4 class="font-bold text-sm mb-1.5 text-neotic-red">Equipos de Cómputo</h4>
+                            <h4 class="font-bold text-xs mb-1.5 text-neotic-red">Equipos de Cómputo</h4>
                             <ul class="text-xs text-gray-300 space-y-0.5">
-                                <li>• Laptops Dell, HP, Lenovo, Apple</li>
-                                <li>• Computadoras de escritorio</li>
+                                <li>• Laptops Dell, HP, Lenovo</li>
+                                <li>• Computadoras escritorio</li>
                                 <li>• Workstations profesionales</li>
-                                <li>• Tablets y dispositivos móviles</li>
                             </ul>
                         </div>
                         <div>
-                            <h4 class="font-bold text-sm mb-1.5 text-neotic-red">Servidores y Networking</h4>
+                            <h4 class="font-bold text-xs mb-1.5 text-neotic-red">Networking & Fibra</h4>
                             <ul class="text-xs text-gray-300 space-y-0.5">
-                                <li>• Servidores Dell PowerEdge, HP ProLiant</li>
                                 <li>• Switches Cisco, HP, Ubiquiti</li>
+                                <li>• OLTs, ONTs, splitters GPON</li>
                                 <li>• Routers y Access Points</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-xs mb-1.5 text-neotic-red">Servidores & Storage</h4>
+                            <ul class="text-xs text-gray-300 space-y-0.5">
+                                <li>• Dell PowerEdge, HP ProLiant</li>
+                                <li>• Storage SAN/NAS</li>
                                 <li>• Racks y gabinetes</li>
                             </ul>
                         </div>
                         <div>
-                            <h4 class="font-bold text-sm mb-1.5 text-neotic-red">Impresoras y Periféricos</h4>
-                            <ul class="text-xs text-gray-300 space-y-0.5">
-                                <li>• Impresoras láser y matriciales</li>
-                                <li>• Plotters de gran formato</li>
-                                <li>• Scanners documentales</li>
-                                <li>• Suministros originales</li>
-                            </ul>
-                        </div>
-                        <div>
-                            <h4 class="font-bold text-sm mb-1.5 text-neotic-red">Seguridad Electrónica</h4>
+                            <h4 class="font-bold text-xs mb-1.5 text-neotic-red">Seguridad & Periféricos</h4>
                             <ul class="text-xs text-gray-300 space-y-0.5">
                                 <li>• Cámaras IP Hikvision, Dahua</li>
-                                <li>• NVR/DVR profesionales</li>
-                                <li>• Control de acceso biométrico</li>
-                                <li>• Alarmas y sensores</li>
+                                <li>• Firewalls Fortinet, pfSense</li>
+                                <li>• UPS y sistemas de energía</li>
                             </ul>
                         </div>
                     </div>
@@ -499,12 +664,12 @@
         </div>
 
         <div class="gradient-red text-white py-2.5 px-12 text-center mt-auto">
-            <div class="text-sm font-light tracking-widest">Garantía oficial en todos nuestros productos</div>
+            <div class="text-sm font-light tracking-widest">Garantía oficial y certificación en todos nuestros productos</div>
         </div>
     </div>
 
 
-    <!-- ================== PÁGINA 4: CONTACTO ================== -->
+    <!-- ================== PÁGINA 5: CONTACTO ================== -->
     <div class="page">
         <div class="h-1.5 gradient-red"></div>
 
@@ -665,7 +830,7 @@
                 <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=2070&auto=format&fit=crop"
                      alt="Equipo"
                      class="w-full h-full object-cover">
-                <div class="absolute inset-0 gradient-dark opacity-90"></div>
+                <div class="absolute inset-0 gradient-dark opacity-80"></div>
                 <div class="absolute inset-0 flex items-center justify-center text-center">
                     <div>
                         <h3 class="text-3xl font-black text-white mb-1">
